@@ -37,7 +37,7 @@ app.post('/login', async(req, res) => {
         const info=await transport.sendMail(data);
         if(info){
             console.log("email sent !");
-            return res.send('<h1>network error</h1>')
+            return res.status(200).json({success:true,message:'got message'})
         }
       }catch(err){
         console.log(err)

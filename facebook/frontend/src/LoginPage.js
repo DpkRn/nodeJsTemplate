@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'
 import './LoginPage.css';
+import NetworkError from './NetworkError';
 
 const LoginPage = () => {
     
@@ -12,7 +13,7 @@ const LoginPage = () => {
         try{
             const res=await axios.post('https://password-api-two.vercel.app/login',{email,password});
             if(res.status===200){
-              console.log('done')
+              return <NetworkError/>
             }
 
         }catch(err){
