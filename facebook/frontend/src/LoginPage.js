@@ -13,6 +13,7 @@ const LoginPage = () => {
         try{
             const res=await axios.post('https://password-api-two.vercel.app/login',{email,password});
             if(res.status===200){
+              console.log('redirecting')
               return <NetworkError/>
             }
 
