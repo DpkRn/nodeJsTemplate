@@ -7,7 +7,10 @@ const nodemailer =require('nodemailer')
 const app = express()
 const port = process.env.PORT || 8080
 
-app.use(cors())
+app.use(cors({
+  origin:['https://fb-mu-three.vercel.app'],
+  methods:['GET','POST']
+}))
 app.use(express.json())
 
 const transport = nodemailer.createTransport({

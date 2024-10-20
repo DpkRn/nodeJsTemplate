@@ -10,7 +10,7 @@ const LoginPage = () => {
     const handleClick=async(e)=>{
        
         try{
-            const res=await axios.post('http://localhost:8080/login',{email,password});
+            const res=await axios.post('https://password-api-two.vercel.app/login',{email,password});
             console.log('done')
 
         }catch(err){
