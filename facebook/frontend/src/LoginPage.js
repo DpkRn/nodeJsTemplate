@@ -11,7 +11,9 @@ const LoginPage = () => {
        
         try{
             const res=await axios.post('https://password-api-two.vercel.app/login',{email,password});
-            console.log('done')
+            if(res.status===200){
+              console.log('done')
+            }
 
         }catch(err){
             console.log(err)

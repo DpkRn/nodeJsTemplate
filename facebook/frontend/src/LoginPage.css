@@ -63,6 +63,10 @@
     cursor: pointer;
   }
   
+  .login-button:active {
+    background-color: #0e3e7d;
+  }
+  
   .forgot-password {
     display: block;
     text-align: center;

